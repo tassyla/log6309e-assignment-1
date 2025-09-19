@@ -14,7 +14,7 @@ file_names = {
 cpu_data = {}
 
 # --- 2. DATA LOADING ---
-print("--- Loading data for Q1 analysis---")
+print("--- Loading data for Q1 analysis ---")
 for version_name, file_path in file_names.items():
     try:
         # Load the Excel file and extract the 'TOTAL_CPU' column
