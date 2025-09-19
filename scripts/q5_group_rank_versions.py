@@ -45,9 +45,7 @@ sns.boxplot(x='version', y='TOTAL_CPU', data=combined_df,
 plt.title('Comparison of CPU Usage Across Software Versions')
 plt.ylabel('TOTAL_CPU Usage')
 plt.xlabel('Software Version')
-plt.savefig('../output/figures/Figure_4_boxplots.png')
 plt.show()
-print("Boxplot saved to 'output/figures/Figure_4_boxplots.png'")
 
 # --- 4. STATISTICAL ANALYSIS ---
 
