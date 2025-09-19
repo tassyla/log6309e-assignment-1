@@ -5,16 +5,16 @@ import numpy as np
 
 # --- 1. SETUP: File names and versions ---
 file_names = {
-    'base_version': 'base_version_perf.xlsx',
-    'version_1': 'version_1_perf.xlsx',
-    'version_2': 'version_2_perf.xlsx',
-    'version_3': 'version_3_perf.xlsx'
+    'base_version': '../data/base_version_perf.xlsx',
+    'version_1':    '../data/version_1_perf.xlsx',
+    'version_2':    '../data/version_2_perf.xlsx',
+    'version_3':    '../data/version_3_perf.xlsx'
 }
 
 cpu_data = {}
 
 # --- 2. DATA LOADING ---
-print("--- Loading data ---")
+print("--- Loading data for Q1 analysis---")
 for version_name, file_path in file_names.items():
     try:
         # Load the Excel file and extract the 'TOTAL_CPU' column
@@ -71,7 +71,7 @@ for version_name, data in cpu_data.items():
         if p_value > alpha:
             print("  - Conclusion: Data appears to be normally distributed (fail to reject H0).")
         else:
-            print("  - Conclusion: Data does NOT appear to be normally distributed (reject H0).")
+            print("  - Conclusion: Data is NOT normally distributed (reject H0).")
     else:
         print(f"\nVersion: {version_name} has too few data points to test for normality.")
 print("-" * 55)
